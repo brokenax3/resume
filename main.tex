@@ -1,0 +1,221 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{purple}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% \renewcommand{\familydefault}{Comic Mono Regular}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% \usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\setmainfont{Iosevka SS02}
+\usepackage{tabularx}
+
+\usepackage[margin=0.8in]{geometry}
+\usepackage{multicol}
+
+\usepackage{import}
+
+\name{{\small\faCircle} Mark Cai Yee}{Lee {\small\faCircle}}
+
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+\setlength{\tabcolsep}{12pt}
+
+%%%%%%%%%%%
+% Content %
+%%%%%%%%%%%
+
+\begin{document}
+\makecvtitle
+\vspace*{-8mm}
+
+\begin{tabular}{ c c c }
+    % \centering
+    \faEnvelope\enspace markklee0508@gmail.com & \faEnvelope\enspace mcyl077@uowmail.edu.au & \faMobile\enspace +61 450 612516 \\\faMobile\enspace +60 17 3910475 & \faGithub\enspace https://github.com/brokenax3 \\
+\end{tabular}
+
+
+\section{EDUCATION \faUniversity}
+
+{\customcventry{}{Bachelor's of Engineering (Computer Engineering)(Honours)(Dean's Scholar)}{University of Wollongong}{Wollongong, NSW}{}
+{\begin{itemize}
+    \item Expected Graduation: June 2022
+\end{itemize}}}
+
+{\customcventry{}{Western Australian Certificate of Education (WACE)}{Sunway University}{Subang Jaya, Malaysia}{}
+{\begin{itemize}
+    \item ATAR: 94.65
+\end{itemize}}}
+
+{\customcventry{}{Malaysian Certificate of Education}{Catholic High School}{Petaling Jaya, Malaysia}{}
+{\begin{itemize}
+    \item Result: 3A+ 5A 1B 1C
+\end{itemize}}}
+\vspace*{2mm}
+
+\section{EXPERIENCE \faBuilding}
+
+{\customcventry{March 2021 - June 2021}{Tutorial Demonstrator}{University of Wollongong}{Sydney, Australia}{}
+{\begin{itemize}
+    \item Assisting and conducting tutorials for a first year engineering subject
+    \item Helping first year students plan projects
+\end{itemize}}}
+
+{\customcventry{December 2016 – March 2017}{Private Tutor}{Pusat Tuisyen Seri Cerdik Intelek}{Bukit Jalil, Malaysia}{}
+{\begin{itemize}
+    \item Tutoring primary school students English and Mathematics
+\end{itemize}}}
+\vspace*{2mm}
+
+
+\section{ACHIEVEMENTS \faTrophy}
+
+\begin{itemize}
+    \item Dean's Scholar
+    \item Dean's Merit List 2020
+\end{itemize}
+\vspace*{2mm}
+
+
+\section{PROJECTS \faProjectDiagram}
+
+{\customcvproject{Smart Energy Sharing Wireless Local Area Networks}{}
+{\begin{itemize}
+    \item Final Year Thesis - ECTE457
+\end{itemize}}}
+
+{\customcvproject{Real-time Vehicle Counting (Ongoing)}{}
+{\begin{itemize}
+    \item UOW Summer Scholarship Program
+    \item Object detection and object tracking using OpenCV
+\end{itemize}}}
+
+{\customcvproject{Truck Hazard Detection System}{}
+{\begin{itemize}
+    \item Engineering Design and Management 3 - ECTE350
+    \item Writing user interface for Main System Hub using QT Creator and GStreamer
+    \item Interfacing wireless modules with the main unit using RTSP streams and SSH commands
+    \item Orgainising group work, meetings and overall project coordination
+\end{itemize}}}
+
+{\customcvproject{Indoor Localisation using Bluetooth Low Energy}{}
+{\begin{itemize}
+    \item Scholar's Project - ECTE355
+\end{itemize}}}
+
+{\customcvproject{Custom Kernel for Samsung Galaxy Tab 2017 (SM-T385)}{}
+{\begin{itemize}
+    \item Removing Samsung KNOX to enable root access and installation of Magisk
+    \item Experimenting with Device Tree, Vendor Specific Blobs and building TWRP Recovery
+\end{itemize}}}
+
+{\customcvproject{Markdown Tools Plugin - Neovim}{}
+{\begin{itemize}
+    \item Writing custom functions using Lua to automate repetitive tasks when writing LaTeX and Markdown
+\end{itemize}}}
+
+{\customcvproject{Telegram Bot}{}
+{\begin{itemize}
+    \item Self-hosted Telegram bot to send news and currently airing anime on a daily basis
+\end{itemize}}}
+
+{\customcvproject{LineageOS and TWRP for OnePlus 5T}{}
+{\begin{itemize}
+    \item Experimenting with building AOSP
+    \item Writing Device Tree and linking Device Specific Vendors to build LineageOS and TWRP
+    \item Using Repo to sync resources to build custom rom
+\end{itemize}}}
+
+{\customcvproject{Dementia Patient Activity Tracker}{}
+{\begin{itemize}
+    \item Engineering Design and Management 2 - ECTE250
+\end{itemize}}}
+\vspace*{2mm}
+
+
+\section{Skills and Software \faTasks}
+
+\begin{minipage}{\maincolumnwidth}
+    \begin{itemize}
+        \item \textbf{Coursework:} Circuit and Systems, Computer Systems, Wireless Networks, Internet of Things, Digital Signal Processing, Electronics, Control Theory, Communication Systems, Programming Autonomous Systems, Embedded Systems
+        \item \textbf{Software and Tools:} AVR Studio, Simulide, RobotOS, Microsoft Office, Vim, QT Creator, AutoCAD, Ubuntu, Arch Linux, CMake
+        \item \textbf{Programming Languages:} Python, C, C++, MATLAB, Java, Bash, Lua, LaTeX, Assembly
+        \item \textbf{Languages:} English, Mandarin, Cantonese, Hokkien, Bahasa Malaysia
+        \item \textbf{General Skills:} Cooperative, Teamwork, Enthusiastic, Hardworking, Communicative, Technical and Practical
+    \end{itemize}
+\end{minipage}
+\vspace*{2mm}
+
+
+\section{EXTRACURRICULAR ACTIVITIES \faChartLine}
+
+{\customcventry{Jan 2016 - Dec 2016}{Cooperation Club, Catholic High School}{President}{Petaling Jaya, Malaysia}{}
+{\begin{itemize}
+    \item Managing club daily affairs and organising quarterly activities
+    \item Converting club member database paperwork to digital systems
+\end{itemize}}}
+
+{\customcventry{Jan 2015 - Dec 2015}{Cooperation Club, Catholic High School}{Webmaster}{Petaling Jaya, Malaysia}{}
+{\begin{itemize}
+    \item Managing club website, Facebook group and online presence
+\end{itemize}}}
+
+{\customcventry{Jan 2016 - Dec 2016}{Archery Club, Catholic High School}{Member}{Petaling Jaya, Malaysia}{}{}}
+
+{\customcventry{Jan 2012 - Dec 2015}{Track and Field Club, Catholic High School}{Member}{Petaling Jaya, Malaysia}{}{}}
+
+{\customcventry{Jan 2012 - Dec 2012}{Chinese Diabolo Club, Catholic High School}{Member}{Petaling Jaya, Malaysia}{}{}}
+\vspace*{2mm}
+
+
+\section{REFERENCES \faAsterisk}
+
+\begin{minipage}{0.5\textwidth}
+    \textbf{Associate Professor Kwan-Wu, Chin} \\
+    Head of Postgraduate Studies \\
+    kwanwu@uow.edu.au \\
+    +61 2 4221 4320
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \textbf{Associate Professor Le Chung, Tran} \\
+    School Adviser for International Students \\
+    lctran@uow.edu.au \\
+    +61 2 4221 3846
+\end{minipage}
+
+\end{document}

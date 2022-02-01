@@ -1,0 +1,9 @@
+# Ignore everything
+
+*
+
+# Except these
+
+!.gitignore
+!main.pdf
+!main.tex
