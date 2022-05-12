@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[14pt,a4paper]{moderncv}
 
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{purple}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
@@ -7,10 +7,10 @@
 
 % \usepackage[utf8]{inputenc}
 \usepackage{fontspec}
-\setmainfont{Iosevka SS02}
+\setmainfont{IBM Plex Serif}[SizeFeatures={Size=12}]
 \usepackage{tabularx}
 
-\usepackage[margin=0.8in]{geometry}
+\usepackage[margin=0.7in]{geometry}
 \usepackage{multicol}
 
 \usepackage{import}
@@ -64,12 +64,14 @@
 \makecvtitle
 \vspace*{-8mm}
 
-\rfoot{\tiny{This document is generated using \LaTeX}}
+% \rfoot{\tiny{This document is generated using \LaTeX}}
 
-\begin{tabular}{ c c c }
-    % \centering
-    \faEnvelope\enspace markklee0508@gmail.com & \faEnvelope\enspace mcyl077@uowmail.edu.au & \faMobile\enspace +61 450 612516 \\\faMobile\enspace +60 17 3910475 & \faGithub\enspace https://github.com/brokenax3 \\
+\begin{center}
+\begin{tabular}{c c}
+    \faEnvelope\enspace markklee0508@gmail.com & \faEnvelope\enspace
+    mcyl077@uowmail.edu.au \\ \faMobile\enspace +60 17 3910475 & \faGithub\enspace https://github.com/brokenax3
 \end{tabular}
+\end{center}
 
 
 \section{EDUCATION \faUniversity}
@@ -77,7 +79,8 @@
 {\customcventry{}{Bachelor's of Engineering (Computer Engineering)(Honours)(Dean's Scholar)}{University of Wollongong}{Wollongong, NSW}{}
 {\begin{itemize}
     \item Expected Graduation: July 2022
-    \item Weighted Average (WAM): 85.01
+    \item Weighted Average Mark (WAM): 85.01
+    \item Cumulative Grade Average Point (CGPA): 3.97
 \end{itemize}}}
 
 {\customcventry{}{Western Australian Certificate of Education (WACE)}{Sunway University}{Subang Jaya, Malaysia}{}
@@ -93,10 +96,21 @@
 
 \section{EXPERIENCE \faBuilding}
 
+{\customcventry{December 2021 – March 2022}{Researcher}{University of
+    Wollongong}{Sydney, Australia}{}
+{\begin{itemize}
+    \item Researching the practical use of neural networks on vehicle counting
+    \item Creating a prototype system which can count vehicles under daytime and
+        nighttime environments
+    \item Producing a research paper on the proposed system
+\end{itemize}}}
+
 {\customcventry{March 2021 - June 2021}{Tutorial Demonstrator}{University of Wollongong}{Sydney, Australia}{}
 {\begin{itemize}
     \item Assisting and conducting tutorials for a first year engineering subject
-    \item Helping first year students plan projects
+    \item Helping first year engineering students plan a sustainable village
+        project
+    \item Advising students on project management and risk management
 \end{itemize}}}
 
 {\customcventry{December 2016 – March 2017}{Private Tutor}{Pusat Tuisyen Seri Cerdik Intelek}{Bukit Jalil, Malaysia}{}
@@ -109,36 +123,62 @@
 \section{ACHIEVEMENTS \faTrophy}
 
 \begin{itemize}
-    \item Dean's Scholar
-    \item Dean's Merit List 2020
+    \item UOW Engineering and Information Sciences Summer Research Scholarship
+        2021
+    \item UOW Dean's Scholar
+    \item UOW Engineering and Information Sciences Dean's Merit List 2020
 \end{itemize}
 \vspace*{2mm}
 
+\clearpage
 
 \section{PROJECTS \faProjectDiagram}
 
 {\customcvproject{Smart Energy Sharing Wireless Local Area Networks}{}
 {\begin{itemize}
-    \item Final Year Thesis - ECTE457
+    \item Final Year Thesis
+    \item Experimenting with energy sharing policies and how energy sharing
+        can benefit access points
+    \item Researching how access points with a limited energy source can use
+        energy efficiently to service the most users
 \end{itemize}}}
 
-{\customcvproject{Real-time Vehicle Counting (Ongoing)}{}
+{\customcvproject{Real-time Vehicle Counting, Low Lighting and Accuracy
+    Enhancement}{}
 {\begin{itemize}
-    \item UOW Summer Scholarship Program
-    \item Object detection and object tracking using OpenCV
+    \item UOW Summer Research Scholarship Program
+    \item Co-author for the paper Vehicle Detection, Counting and Classification
+        - Accuracy Enhancement (Submitted to ICIC2022 Conference)
+    \item Object detection using a convolution neural network
+    \item Object tracking using a Kalman Filter, Hungarian Matching and
+        Object Intersection over Union
+    \item Nighttime detection using headlight pairing
+\end{itemize}}}
+
+{\customcvproject{Ordering Product Microservices}{}
+{\begin{itemize}
+    \item Software Engineering Practices and Principles - CSCI318
+    \item Using Java and Spring Boot to product microservices which enable
+        product ordering and database management via REST and internal messaging
+        using Apache Kafka
 \end{itemize}}}
 
 {\customcvproject{Truck Hazard Detection System}{}
 {\begin{itemize}
     \item Engineering Design and Management 3 - ECTE350
-    \item Writing user interface for Main System Hub using QT Creator and GStreamer
-    \item Interfacing wireless modules with the main unit using RTSP streams and SSH commands
-    \item Orgainising group work, meetings and overall project coordination
+    \item Writing user interface for Main System Hub using QT Creator and
+        GStreamer Libraries
+    \item Interfacing a camera module and ultrasonic sensor module with the main
+        unit using RTSP streams and SSH commands
+    \item Organising group work, meetings and overall project coordination
 \end{itemize}}}
 
 {\customcvproject{Indoor Localisation using Bluetooth Low Energy}{}
 {\begin{itemize}
     \item Scholar's Project - ECTE355
+    \item Experimentation with localisation using trilateration and Bluetooth beacons
+    \item This project uses Gatttool on Linux to get Received Signal Strength
+        Indicator and the data processing uses MATLAB
 \end{itemize}}}
 
 {\customcvproject{Custom Kernel for Samsung Galaxy Tab 2017 (SM-T385)}{}
@@ -149,24 +189,19 @@
 
 {\customcvproject{Markdown Tools Plugin - Neovim}{}
 {\begin{itemize}
-    \item Writing custom functions using Lua to automate repetitive tasks when writing LaTeX and Markdown
+    \item Writing custom functions using Lua to automate repetitive tasks when
+        writing LaTeX and Markdown on Linux
 \end{itemize}}}
 
 {\customcvproject{Telegram Bot}{}
 {\begin{itemize}
-    \item Self-hosted Telegram bot to send news and currently airing anime on a daily basis
-\end{itemize}}}
-
-{\customcvproject{LineageOS and TWRP for OnePlus 5T}{}
-{\begin{itemize}
-    \item Experimenting with building AOSP
-    \item Writing Device Tree and linking Device Specific Vendors to build LineageOS and TWRP
-    \item Using Repo to sync resources to build custom rom
+    \item Self-hosted Telegram bot to send news and currently airing anime on a
+        daily basis using Python
 \end{itemize}}}
 
 {\customcvproject{Dementia Patient Activity Tracker}{}
 {\begin{itemize}
-    \item Engineering Design and Management 2 - ECTE250
+    \item Event driven programming using C++ and an Arduino
 \end{itemize}}}
 \vspace*{2mm}
 
@@ -175,15 +210,18 @@
 
 \begin{minipage}{\maincolumnwidth}
     \begin{itemize}
-        \item \textbf{Coursework:} Circuit and Systems, Computer Systems, Wireless Networks, Internet of Things, Digital Signal Processing, Electronics, Control Theory, Communication Systems, Programming Autonomous Systems, Embedded Systems, Computer Vision, Deep Learning
-        \item \textbf{Software and Tools:} AVR Studio, Simulide, RobotOS, Microsoft Office, Vim, QT Creator, AutoCAD, Ubuntu, Arch Linux, CMake, Android Studio
-        \item \textbf{Programming Languages:} Python, C, C++, MATLAB, Java, Bash, Lua, LaTeX, Assembly
+        \item \textbf{Coursework:} Circuit and Systems, Wireless Networks, Internet of Things, Digital Signal Processing, Electronics, Control Theory, Communication Systems, Programming Autonomous Systems, Embedded Systems, Computer Vision, Deep Learning
+        \item \textbf{Software and Tools:} MATLAB, AVR Studio, RobotOS,
+            Microsoft Office, Vim, QT Creator, AutoCAD, Ubuntu, Arch Linux,
+            CMake, Android Studio, OpenCV
+        \item \textbf{Programming Languages:} Python, C, C++, MATLAB, Java, Bash, Lua, Assembly
         \item \textbf{Languages:} English, Mandarin, Cantonese, Hokkien, Bahasa Malaysia
-        \item \textbf{General Skills:} Cooperative, Teamwork, Enthusiastic, Hardworking, Communicative, Technical and Practical
+        % \item \textbf{General Skills:} Cooperative, Teamwork, Enthusiastic, Hardworking, Communicative, Technical and Practical
     \end{itemize}
 \end{minipage}
 \vspace*{2mm}
 
+\clearpage
 
 \section{EXTRACURRICULAR ACTIVITIES \faChartLine}
 
